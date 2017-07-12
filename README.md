@@ -14,3 +14,8 @@ http://document-api.cloudhub.io/mock/v1
 /sap/dirs/{docid} (GET)  
 /sap/file (POST)  
 /sap/file/{link}  
+
+{
+  "filename":"docname.xml",
+  "content":"content stream"
+}
