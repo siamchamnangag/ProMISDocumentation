@@ -18,8 +18,16 @@ http://document-api.cloudhub.io/mock/v1
 /sap/file (POST)  
 /sap/file/{link}  
 
-## Old DIR URL
-`https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx`
+## File Link
+
+### Happy Path
+
+OLD_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx`  
+NEW_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment_2.xlsx`
+
+### Upload failed
+
+OLD_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/upload_failed.xlsx`
 
 ## /sap/file (POST) Request Body
 
