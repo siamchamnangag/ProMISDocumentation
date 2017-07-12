@@ -15,7 +15,14 @@ http://document-api.cloudhub.io/mock/v1
 /sap/file (POST)  
 /sap/file/{link}  
 
+## Old DIR URL
+`https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx`
+
+## /sap/file (POST) Request Body
+
+```
 {
   "filename":"docname.xml",
   "content":"content stream"
 }
+```
