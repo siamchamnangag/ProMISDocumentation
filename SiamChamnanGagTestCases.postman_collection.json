@@ -1,0 +1,175 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SiamChamnanGagTestCases",
+		"_postman_id": "bd653e88-b9de-ea57-a774-4bb6e1f77051",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "file - get file content - found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Check content length\"] = jsonData.headers[\"Content-Length\"][0] === \"30025\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:9000/files?url=https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "file - get file content - not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 400\"] = responseCode.code === 400;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:9000/files?urlx=dummy",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "file - upload file - success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 201\"] = responseCode.code === 201;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Return new link\"] = jsonData.link === \"https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment_2.xlsx\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:9000/files",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"description": "",
+							"type": "file",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "dir - get dir - success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"docid\"] = jsonData.docid === 1;",
+							"tests[\"user\"] = jsonData.user === \"pwp\";",
+							"tests[\"link\"] = jsonData.link === \"https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx\";",
+							"tests[\"description\"] = jsonData.description === \"testing document 1\";",
+							"tests[\"status\"] = jsonData.status === \"iw\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:9600/dir/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-token",
+						"value": "Wy4c8Dhe2oeK9ZaBP4j50Q==00000000",
+						"description": ""
+					},
+					{
+						"key": "x-api-userref",
+						"value": "7000122",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "dir - get dir - document is not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"docid\"] = jsonData.docid === 1;",
+							"tests[\"user\"] = jsonData.user === \"pwp\";",
+							"tests[\"link\"] = jsonData.link === \"https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx\";",
+							"tests[\"description\"] = jsonData.description === \"testing document 1\";",
+							"tests[\"status\"] = jsonData.status === \"iw\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:9600/dir/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-token",
+						"value": "Wy4c8Dhe2oeK9ZaBP4j50Q==00000000",
+						"description": ""
+					},
+					{
+						"key": "x-api-userref",
+						"value": "7000122",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
