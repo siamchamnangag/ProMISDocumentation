@@ -9,6 +9,8 @@ https://anypoint.mulesoft.com/apiplatform/emxom/#/portals/organizations/a2079598
 
 BaseURL:
 http://document-api.cloudhub.io/mock/v1  
+NewBaseURL:
+http://doc-api.cloudhub.io/mock/v1/
 /documents/{docid} (GET_  
 /sap/users (GET)  
 /sap/users/{lanid} (GET)  
