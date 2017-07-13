@@ -1,0 +1,49 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DIR Test",
+		"_postman_id": "bf648b17-1ed5-c300-1847-aef9a83a80f5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9600/dir/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"docid\"] = jsonData.docid === 1;",
+							"tests[\"user\"] = jsonData.user === \"pwp\";",
+							"tests[\"link\"] = jsonData.link === \"https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx\";",
+							"tests[\"description\"] = jsonData.description === \"testing document 1\";",
+							"tests[\"status\"] = jsonData.status === \"iw\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:9600/dir/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-token",
+						"value": "Wy4c8Dhe2oeK9ZaBP4j50Q==00000000",
+						"description": ""
+					},
+					{
+						"key": "x-api-userref",
+						"value": "7000122",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
