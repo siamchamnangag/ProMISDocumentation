@@ -23,11 +23,11 @@ http://document-api.cloudhub.io/mock/v1
 ### Happy Path
 
 OLD_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx`  
-NEW_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment_2.xlsx`
+NEW_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_timestamp.xlsx`
 
 ### Upload failed
 
-OLD_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/upload_failed.xlsx`
+OLD_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/Upload_Failed_PMoC.xlsx`
 
 ## /sap/file (POST) Request Body
 
