@@ -40,17 +40,30 @@ http://doc-api.cloudhub.io/mock/v1/
 ### Test Results
 
 #### Story 1: Create original file from Template
-![results](http://imgur.com/8uQj6Or.png)
+![results_1](http://imgur.com/8uQj6Or.png)
 
 Document is created (document_id = 1)
 ![id=1](http://imgur.com/WIiizJ0.png)
 
 Document is not found (document_id = 2)
-![id=1](http://imgur.com/qtoyrmO.png)
+![id=2](http://imgur.com/qtoyrmO.png)
 
 Upload failed (document_id = 3)
-![id=1](http://imgur.com/0QlvWf6.png)
+![id=3](http://imgur.com/0QlvWf6.png)
 
 
 
 #### Story 2: Create DIR
+![results](http://imgur.com/pGSfQ4F.png)
+
+Document is created (document_id = 1, user = NGOLAMA)
+![id=1](http://imgur.com/ncSo2h1.png)
+
+Document is not found (document_id = 2, user = NGOLAMA)
+![id=2](http://imgur.com/nKgu8PV.png)
+
+User not found (document_id = 3, user = XXX)
+![id=3](http://imgur.com/e88sdUe.png)
+
+Upload failed (document_id = 4, user = NGOLAMA)
+![id=4](http://imgur.com/rJQagsy.png)
