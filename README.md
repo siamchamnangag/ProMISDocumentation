@@ -2,6 +2,15 @@
 
 Project documentation
 
+## Acceptance Test Cases
+
+| # | DocID | User | oldDIR | DocID | Description | Status | User | Link | newDIR | DocID | Description | Status | User | Link | message |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | 1 | NGOLAMA | | 1 | PMoC | RE | PWP | [PMoC_complexity_and_effort_assessment.xlsx](https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx) | | 101 | PMoC | IW | NGOLAMA | [PMoC_yyyyMMddHHmmss.xlsx](https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_yyyyMMddHHmmss.xlsx) | Document is created. |
+| 2 | 2 | NGOLAMA | | | | | | | | | | | | | Document not found. |
+| 3 | 3 | XXX | | | | | | | | | | | | | User not found. |
+| 4 | 4 | NGOLAMA | | 4 | fail | RE | PWP | [PMoC_complexity_and_effort_assessment.xlsx](https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx) | | | | | | | Upload failed. |
+
 ## Mock APIs
 
 Mock API Portal:
@@ -19,37 +28,6 @@ http://doc-api.cloudhub.io/mock/v1/
 /sap/dirs/{docid} (GET)  
 /sap/file (POST)  
 /sap/file/{link}  
-
-## File Link
-
-### Happy Path
-
-OLD_LINK =  
-- file=`https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx`  
-- description=`Test`
-
-NEW_LINK = `https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/Test_yyyyMMddHHmmss.xlsx`
-
-### Upload failed
-
-OLD_LINK =  
-- file=`https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx`  
-- description=`Fail`
-
-## /sap/file (POST) Request Body
-
-```
-{
-  "filename":"docname.xml",
-  "content":"content stream"
-}
-```
-
-## Stubby4j
-
-- Download --> http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.github.azagniotov%22%20AND%20a%3A%22stubby4j%22
-- Manual (Eng) --> https://github.com/azagniotov/stubby4j/blob/master/README.md
-- Manual (Tha) --> http://www.somkiat.cc/stub-http-server-stubby4j/
 
 ## Design
 
