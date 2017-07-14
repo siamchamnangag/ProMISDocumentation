@@ -1,20 +1,21 @@
 {
-	"id": "cc6a120f-c0a0-ca0e-b72d-a3ee2e211145",
+	"id": "9259e7af-9fac-ad1f-f5aa-db8ee50fc40b",
 	"name": "Files service",
 	"description": "",
 	"order": [
-		"12d0f0ec-8d92-c058-527d-a56be5780c1f",
-		"bc1e4969-c567-943f-d0fd-e2ac7c882b1e",
-		"e7e9dc00-1a52-1e0f-f90f-475482e252bc",
-		"071b3217-b640-9b86-d6b7-ec69e8251a29"
+		"db1726e8-7f4c-9cf0-9b51-7c85c3c35352",
+		"9292699a-8443-1fdf-b7d7-bbcac1e67c1c",
+		"d385480a-f645-5d7d-ed6c-e2deb9910aea",
+		"89b7820b-bc33-560b-fe4d-94fb9931fbcf"
 	],
 	"folders": [],
 	"timestamp": 1499840125061,
 	"owner": 0,
 	"public": false,
+	"hasRequests": true,
 	"requests": [
 		{
-			"id": "071b3217-b640-9b86-d6b7-ec69e8251a29",
+			"id": "89b7820b-bc33-560b-fe4d-94fb9931fbcf",
 			"headers": "",
 			"headerData": [],
 			"url": "http://188.166.210.45:8002/files",
@@ -26,7 +27,6 @@
 			"data": [
 				{
 					"key": "file",
-					"value": "README.md",
 					"description": "",
 					"type": "file",
 					"enabled": true
@@ -47,40 +47,11 @@
 			"time": 1499937910933,
 			"name": "POST 188.166.210.45:8002/files 500",
 			"description": "",
-			"collectionId": "cc6a120f-c0a0-ca0e-b72d-a3ee2e211145",
+			"collectionId": "9259e7af-9fac-ad1f-f5aa-db8ee50fc40b",
 			"responses": []
 		},
 		{
-			"id": "12d0f0ec-8d92-c058-527d-a56be5780c1f",
-			"headers": "",
-			"headerData": [],
-			"url": "http://188.166.210.45:8002/files?url=https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx",
-			"queryParams": [
-				{
-					"key": "url",
-					"value": "https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx",
-					"equals": true,
-					"description": "",
-					"enabled": true
-				}
-			],
-			"preRequestScript": null,
-			"pathVariables": {},
-			"pathVariableData": [],
-			"method": "GET",
-			"data": null,
-			"dataMode": "params",
-			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Check content length\"] = jsonData.headers[\"Content-Length\"][0] === \"30025\";",
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1499937484669,
-			"name": "GET 188.166.210.45:8002/files 200",
-			"description": "",
-			"collectionId": "cc6a120f-c0a0-ca0e-b72d-a3ee2e211145",
-			"responses": []
-		},
-		{
-			"id": "bc1e4969-c567-943f-d0fd-e2ac7c882b1e",
+			"id": "9292699a-8443-1fdf-b7d7-bbcac1e67c1c",
 			"headers": "",
 			"headerData": [],
 			"url": "http://188.166.210.45:8002/files?urlx=dummy",
@@ -106,11 +77,11 @@
 			"time": 1499937516631,
 			"name": "GET 188.166.210.45:8002/files 400",
 			"description": "",
-			"collectionId": "cc6a120f-c0a0-ca0e-b72d-a3ee2e211145",
+			"collectionId": "9259e7af-9fac-ad1f-f5aa-db8ee50fc40b",
 			"responses": []
 		},
 		{
-			"id": "e7e9dc00-1a52-1e0f-f90f-475482e252bc",
+			"id": "d385480a-f645-5d7d-ed6c-e2deb9910aea",
 			"headers": "",
 			"headerData": [],
 			"url": "http://188.166.210.45:8002/files",
@@ -122,7 +93,6 @@
 			"data": [
 				{
 					"key": "file",
-					"value": "README.md",
 					"description": "",
 					"type": "file",
 					"enabled": true
@@ -143,7 +113,36 @@
 			"time": 1499937782824,
 			"name": "POST 188.166.210.45:8002/files 201",
 			"description": "",
-			"collectionId": "cc6a120f-c0a0-ca0e-b72d-a3ee2e211145",
+			"collectionId": "9259e7af-9fac-ad1f-f5aa-db8ee50fc40b",
+			"responses": []
+		},
+		{
+			"id": "db1726e8-7f4c-9cf0-9b51-7c85c3c35352",
+			"headers": "",
+			"headerData": [],
+			"url": "http://188.166.210.45:8002/files?url=https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx",
+			"queryParams": [
+				{
+					"key": "url",
+					"value": "https://github.com/siamchamnangag/ProMISFileService/raw/master/src/main/resources/PMoC_complexity_and_effort_assessment.xlsx",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;\n\nvar jsonData = JSON.parse(responseBody);\ntests[\"Check content length\"] = jsonData.headers[\"Content-Length\"][0] === \"30025\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1499937484669,
+			"name": "GET 188.166.210.45:8002/files 200",
+			"description": "",
+			"collectionId": "9259e7af-9fac-ad1f-f5aa-db8ee50fc40b",
 			"responses": []
 		}
 	]
